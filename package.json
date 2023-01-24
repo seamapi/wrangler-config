@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": "./cli.js",
   "scripts": {
     "build": "tsup ./src/index.ts --dts --sourcemap"
   },
   "keywords": [],
-  "author": "",
+  "author": "Severin Ibarluzea",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.11.18",
     "esbuild": "^0.17.4",
     "esbuild-register": "^3.4.2",
     "json2toml": "^4.0.1",
-    "tsup": "^6.5.0"
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
   }
 }

@@ -1,0 +1,11 @@
+compatibility_date = "2023-01-20"
+[[kv_namespaces]]
+binding = "BLOG_CACHE"
+id = "b9b24cee481e4e5387f02e2331c14349"
+main = "src/index.ts"
+name = "my-config"
+node_compat = true
+[triggers]
+crons = ["*/1 * * * *"]
+[vars]
+MY_ENV_VAR = "b9b24cee481e4e5387f02e2331c14349"

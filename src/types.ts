@@ -34,7 +34,7 @@ export interface Environment {
   define?: Record<string, string>
 
   /** A map of environment variables to set when deploying your Worker. */
-  vars?: Array<{}>
+  vars?: Record<string, string>
 
   /** A list of KV namespaces to bind to your Worker. */
   kv_namespaces?: Array<{ binding: string; id: string; preview_id?: string }>
