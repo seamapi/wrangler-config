@@ -1,13 +1,13 @@
-# wrangler-ts
+# wrangler-config
 
-A tool to help you build wrangler.toml with Typescript.
+Write your wrangler config with Typescript instead of `toml`.
+
+Automatically generates a `wrangler.toml` file from a `wrangler.config.ts`.
 
 ## Usage
 
-Use a helpful typescript autocomplete to build your `wrangler.toml` file:
-
 ```ts
-import { config, cron } from "wrangler-ts"
+import { config, cron } from "wrangler-config"
 export default config({
   name: "my-config",
   main: "src/index.ts",
