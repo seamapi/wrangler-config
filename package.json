@@ -1,9 +1,10 @@
 {
   "name": "wrangler-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": "./cli.js",
+  "repository": "git@github.com:seamapi/wrangler-config.git",
   "scripts": {
     "build": "tsup ./src/index.ts --dts --sourcemap"
   },
