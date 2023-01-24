@@ -23,16 +23,43 @@ export interface WranglerConfig extends Environment {
 
   site?: WorkerSiteConfig
 
-  env?: {
-    staging?: Environment
-  }
+  env?: Record<string, Environment>
 }
 
 export interface Environment {
-  name: string
   route?: Route
   routes?: Route[]
+
+  /** A map of values to substitute when deploying your Worker. */
+  define?: Record<string, string>
+
+  /** A map of environment variables to set when deploying your Worker. */
+  vars?: Array<{}>
+
+  /** A list of KV namespaces to bind to your Worker. */
   kv_namespaces?: Array<{ binding: string; id: string; preview_id?: string }>
+
+  /** A list of Durable Objects that your Worker should be bound to. Refer to Durable Objects. */
+  durable_objects?: Array<{
+    name: string
+    class_name: string
+    script_name?: string
+    environment?: string
+  }>
+
+  /** A list of R2 buckets that your Worker should be bound to. */
+  r2_buckets?: Array<{
+    binding: string
+    bucket_name: string
+    preview_bucket_name?: string
+  }>
+
+  /** A list of service bindings that your Worker should be bound to. Refer to service bindings. */
+  services?: Array<{
+    binding: string
+    service: string
+    environment?: string
+  }>
 }
 
 export interface Route {
